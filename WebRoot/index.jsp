@@ -8,33 +8,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 
   <head>
-    <base href="<%=basePath%>">
-    
-    <title>学海无涯~</title>
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+   
   </head>
   
   <body>
-  for输出1-10
-  <br />
-  <%!String str="0"; %>
-  <%
-  for(int i = 1;i<=10;i++){
-  	str=str+i;
-  
-  }
-  %>
-  <br />
-  输出
-    <br />
-  <%=str %>
-  
+ 用户信息：<br><hr>
+ <form method="get" action="login.jsp">
+ <table>
+ <tr><td>姓名：<input name="name" type="text"></td></tr>
+  <tr><td>密码：<input name="password" type="text"></td></tr>
+  <tr><td>年龄：<input name="age" type="text"></td></tr>
+  <tr><td><input value="提交" type="submit"></td></tr>
+ </table>
+ </form>
   </body>
 </html>
