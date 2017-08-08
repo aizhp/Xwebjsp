@@ -22,10 +22,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <tr><td><input value="计算" type="submit"></td></tr>
  </table>
  </form>
- <%
+ <%=request.getRemoteAddr() %>
+ <%=request.getRemoteHost()%>
  
+ <%
+ 	String str="";
+ 	int i =0;
+ 	if(application.getAttribute("count")==null){
+ 		application.setAttribute("count","1");
+ 		}else{
+ 		str=application.getAttribute("count").toString();
+ 		i=Integer.parseInt(str);
+ 		application.setAttribute("count", Integer.toString(i+10));
+ 		}
  
   %>
  
+ 您是第<%=application.getAttribute("count") %>位访问者。
   </body>
 </html>
